@@ -11,9 +11,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var viewImage: UIView!
     
-    @IBOutlet weak var redCount: UILabel!
-    @IBOutlet weak var greenCount: UILabel!
-    @IBOutlet weak var blueCount: UILabel!
+    @IBOutlet weak var redCount: UITextField!
+    @IBOutlet weak var greenCount: UITextField!
+    @IBOutlet weak var blueCount: UITextField!
+    
     
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
@@ -22,8 +23,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewImage.layer.cornerRadius = 5
     }
+    
+    
     
     func colorChange() {
         viewImage.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
@@ -36,6 +39,26 @@ class ViewController: UIViewController {
         blueCount.text = String (blueSlider.value)
     }
     
-
+    @IBAction func changeRed(_ sender: Any) {
+        redSlider.value = Float(redCount.text!)!
+        colorChange()
+    }
+    
+    @IBAction func changeGreen(_ sender: Any) {
+        greenSlider.value = Float(greenCount.text!)!
+        colorChange()
+    }
+    
+    @IBAction func changeBlue(_ sender: Any) {
+        blueSlider.value = Float(blueCount.text!)!
+        colorChange()
+    }
+    
+    @IBAction func tap(_ sender: Any) {
+        redCount.resignFirstResponder()
+        greenCount.resignFirstResponder()
+        blueCount.resignFirstResponder()
+    }
+    
 }
 
