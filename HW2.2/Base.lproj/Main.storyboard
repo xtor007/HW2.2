@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,59 +13,68 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW2_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfO-Vs-XlS">
-                                <rect key="frame" x="20" y="70" width="374" height="217"/>
+                                <rect key="frame" x="20" y="26" width="374" height="135"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5As-dn-Cj8">
-                                <rect key="frame" x="20" y="327" width="37" height="26"/>
+                                <rect key="frame" x="20" y="201" width="37" height="26"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qe-nq-dDZ">
-                                <rect key="frame" x="20" y="357" width="55" height="26"/>
+                                <rect key="frame" x="20" y="231" width="55" height="26"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeK-qv-5sC">
-                                <rect key="frame" x="20" y="384" width="41" height="26"/>
+                                <rect key="frame" x="20" y="258" width="41" height="26"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tYx-Mz-rBj">
-                                <rect key="frame" x="81" y="316" width="263" height="31"/>
+                                <rect key="frame" x="81" y="190" width="263" height="31"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
+                                <connections>
+                                    <action selector="sliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="3jw-vi-yuB"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PB2-4t-4wu">
-                                <rect key="frame" x="80" y="349" width="263" height="31"/>
+                                <rect key="frame" x="80" y="223" width="263" height="31"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
+                                <connections>
+                                    <action selector="sliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ijd-Fk-3dg"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="U3B-JR-5ff">
-                                <rect key="frame" x="81" y="382" width="263" height="31"/>
+                                <rect key="frame" x="81" y="256" width="263" height="31"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
+                                <connections>
+                                    <action selector="sliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="NoF-Xg-Ia7"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUh-TB-pQ6">
-                                <rect key="frame" x="350" y="316" width="35" height="21"/>
+                                <rect key="frame" x="350" y="190" width="35" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyI-Pd-LAZ">
-                                <rect key="frame" x="350" y="353" width="35" height="21"/>
+                                <rect key="frame" x="350" y="227" width="35" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngo-ej-bC4">
-                                <rect key="frame" x="350" y="386" width="35" height="21"/>
+                                <rect key="frame" x="350" y="260" width="35" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -104,6 +113,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pUh-TB-pQ6" secondAttribute="trailing" constant="29" id="zfc-YE-Wgl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueCount" destination="Ngo-ej-bC4" id="6co-Ju-Nwf"/>
+                        <outlet property="blueSlider" destination="U3B-JR-5ff" id="u4P-dc-bsZ"/>
+                        <outlet property="greenCount" destination="wyI-Pd-LAZ" id="JH6-0R-7Ns"/>
+                        <outlet property="greenSlider" destination="PB2-4t-4wu" id="cTC-Ny-ZC5"/>
+                        <outlet property="redCount" destination="pUh-TB-pQ6" id="8WE-q2-6vz"/>
+                        <outlet property="redSlider" destination="tYx-Mz-rBj" id="qZn-AM-Vyb"/>
+                        <outlet property="viewImage" destination="RfO-Vs-XlS" id="zCe-rb-shk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
